@@ -1,27 +1,20 @@
-import {
-  HeadContent,
-  Scripts,
-  createRootRouteWithContext,
-} from '@tanstack/react-router'
-import { TanStackRouterDevtoolsPanel } from '@tanstack/react-router-devtools'
-import { TanStackDevtools } from '@tanstack/react-devtools'
-
-import ClerkProvider from '../integrations/clerk/provider'
-
-import TanStackQueryDevtools from '../integrations/tanstack-query/devtools'
+import { createRootRouteWithContext } from '@tanstack/react-router'
 
 import appCss from '../styles.css?url'
 
 import type { QueryClient } from '@tanstack/react-query'
-
-import type { TRPCRouter } from '#/integrations/trpc/router'
 import type { TRPCOptionsProxy } from '@trpc/tanstack-react-query'
+
+import Shell from '@/components/shell'
+import type { TRPCRouter } from '@/integrations/trpc/router'
 
 interface MyRouterContext {
   queryClient: QueryClient
 
   trpc: TRPCOptionsProxy<TRPCRouter>
 }
+
+const DEFAULT_TITLE = 'n4'
 
 export const Route = createRootRouteWithContext<MyRouterContext>()({
   head: () => ({
@@ -34,7 +27,7 @@ export const Route = createRootRouteWithContext<MyRouterContext>()({
         content: 'width=device-width, initial-scale=1',
       },
       {
-        title: 'TanStack Start Starter',
+        title: DEFAULT_TITLE,
       },
     ],
     links: [
@@ -44,33 +37,5 @@ export const Route = createRootRouteWithContext<MyRouterContext>()({
       },
     ],
   }),
-  shellComponent: RootDocument,
+  shellComponent: Shell,
 })
-
-function RootDocument({ children }: { children: React.ReactNode }) {
-  return (
-    <html lang="en">
-      <head>
-        <HeadContent />
-      </head>
-      <body>
-        <ClerkProvider>
-          {children}
-          <TanStackDevtools
-            config={{
-              position: 'bottom-right',
-            }}
-            plugins={[
-              {
-                name: 'Tanstack Router',
-                render: <TanStackRouterDevtoolsPanel />,
-              },
-              TanStackQueryDevtools,
-            ]}
-          />
-        </ClerkProvider>
-        <Scripts />
-      </body>
-    </html>
-  )
-}
