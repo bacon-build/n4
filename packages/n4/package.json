@@ -1,0 +1,13 @@
+{
+  "name": "n4",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "main": "index.ts",
+  "exports": {
+    ".": "./index.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
