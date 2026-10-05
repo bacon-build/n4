@@ -258,3 +258,11 @@ Loaders simplify your data fetching logic dramatically. Check out more informati
 You can learn more about all of the offerings from TanStack in the [TanStack documentation](https://tanstack.com).
 
 For TanStack Start specific documentation, visit [TanStack Start](https://tanstack.com/start).
+
+## TODO
+
+After `@bacondotbuild/n4` is published to npm, change this entry in `package.json`:
+
+```json
+"@bacondotbuild/n4-published": "npm:@bacondotbuild/n4@^1.0.0"
+```
