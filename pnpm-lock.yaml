@@ -54,6 +54,9 @@ importers:
       '@trpc/tanstack-react-query':
         specifier: ^11.11.0
         version: 11.19.0(@tanstack/react-query@5.104.0)(@trpc/client@11.19.0)(@trpc/server@11.19.0)(react@19.3.0)(typescript@6.0.3)
+      '@uidotdev/usehooks':
+        specifier: ^2.4.1
+        version: 2.4.1(react-dom@19.3.0)(react@19.3.0)
       drizzle-kit:
         specifier: ^0.31.9
         version: 0.31.11
@@ -82,6 +85,9 @@ importers:
         specifier: ^4.3.6
         version: 4.6.5
     devDependencies:
+      '@tailwindcss/forms':
+        specifier: ^0.5.11
+        version: 0.5.11(tailwindcss@4.3.3)
       '@tanstack/devtools-vite':
         specifier: latest
         version: 0.8.5(@emnapi/core@1.11.3)(@emnapi/runtime@1.11.3)(vite@8.3.2)
@@ -2065,6 +2071,15 @@ packages:
       tslib: 2.8.1
     dev: false
 
+  /@tailwindcss/forms@0.5.11(tailwindcss@4.3.3):
+    resolution: {integrity: sha512-h9wegbZDPurxG22xZSoWtdzc41/OlNEUQERNqI/0fOwa2aVlWGu7C35E/x6LDyD3lgtztFSSjKZyuVM0hxhbgA==}
+    peerDependencies:
+      tailwindcss: '>=3.0.0 || >= 3.0.0-alpha.1 || >= 4.0.0-alpha.20 || >= 4.0.0-beta.1'
+    dependencies:
+      mini-svg-data-uri: 1.4.4
+      tailwindcss: 4.3.3
+    dev: true
+
   /@tailwindcss/node@4.3.3:
     resolution: {integrity: sha512-/T8IKEsf9VTU6tLjgC7+sv2mOPtQxzE2jMw7u4Tt40Tx+QSZxpzh95/H6cMKoja9XuW7iMdLJYBB0o9G1CaAgg==}
     dependencies:
@@ -3020,6 +3035,17 @@ packages:
       '@typescript-eslint/types': 8.71.0
       eslint-visitor-keys: 5.0.1
     dev: true
+
+  /@uidotdev/usehooks@2.4.1(react-dom@19.3.0)(react@19.3.0):
+    resolution: {integrity: sha512-1I+RwWyS+kdv3Mv0Vmc+p0dPYH0DTRAo04HLyXReYBL9AeseDWUJyi4THuksBJcu9F0Pih69Ak150VDnqbVnXg==}
+    engines: {node: '>=16'}
+    peerDependencies:
+      react: '>=18.0.0'
+      react-dom: '>=18.0.0'
+    dependencies:
+      react: 19.3.0
+      react-dom: 19.3.0(react@19.3.0)
+    dev: false
 
   /@unrs/resolver-binding-android-arm-eabi@1.12.2:
     resolution: {integrity: sha512-g5T90pqg1bo/7mytQx6F4iBNC0Wsh9cu+z9veDbFjc7HjpesJFWD7QMS0NGStXM075+7dJPPVvBbpZlnrdpi/w==}
@@ -4508,6 +4534,11 @@ packages:
     dependencies:
       '@jridgewell/sourcemap-codec': 1.6.0
 
+  /mini-svg-data-uri@1.4.4:
+    resolution: {integrity: sha512-r9deDe9p5FJUPZAk3A59wGH7Ii9YrjjWw0jmw/liSbHl2CHiyXj6FcDXDu2K3TjVAXqiJdaw3xxwlZZr9E6nHg==}
+    hasBin: true
+    dev: true
+
   /minimatch@10.2.6:
     resolution: {integrity: sha512-vpLQEs+VLCr1nU0BXS07maYoFwlDAH0gngQuuttxIwutDFEMHq2blX+8vpgxDdK3J1PwjCJiep77OitTZ4Ll1A==}
     engines: {node: 18 || 20 || >=22}
@@ -5236,7 +5267,6 @@ packages:
 
   /tailwindcss@4.3.3:
     resolution: {integrity: sha512-gOhV3P7ufE62QDGg1zVaTgCR+EtPv92k2nIhVcVKcLmxT1sUBsQGhnZj175j+MqRt4zLF7ic+sCYjfhxMxj7YQ==}
-    dev: false
 
   /tapable@2.3.3:
     resolution: {integrity: sha512-uxc/zpqFg6x7C8vOE7lh6Lbda8eEL9zmVm/PLeTPBRhh1xCgdWaQ+J1CUieGpIfm2HdtsUpRv+HshiasBMcc6A==}
