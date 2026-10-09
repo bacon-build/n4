@@ -13,7 +13,7 @@ importers:
   .:
     dependencies:
       '@bacondotbuild/n4':
-        specifier: workspace:*
+        specifier: latest
         version: link:packages/n4
       '@bacondotbuild/n4-published':
         specifier: link:./packages/n4
