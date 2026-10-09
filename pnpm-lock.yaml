@@ -135,6 +135,10 @@ importers:
         version: 8.3.2(@types/node@22.20.5)(tsx@4.23.15)
 
   packages/n4:
+    dependencies:
+      '@tanstack/markdown':
+        specifier: ^1.0.0
+        version: 1.0.0(react@19.3.0)
     devDependencies:
       tsup:
         specifier: ^8.5.1
@@ -2342,6 +2346,20 @@ packages:
   /@tanstack/history@1.162.4:
     resolution: {integrity: sha512-utTS5L2OkeYUzXGohL1Z8sefu1GLNOJcxe8Hd6iIdc/Xo1K1nDB2JEp4iSFhvYh33xKC9V91TxrS8qfrpoKobQ==}
     engines: {node: '>=20.19'}
+
+  /@tanstack/markdown@1.0.0(react@19.3.0):
+    resolution: {integrity: sha512-zE07RepFMbSQlHdnE82twgiVOKy50rP6a/X9UPOOBt8Z8x9lzaPvGpn2zioCnjXMvNt/IQkW5sSalXQ25C/FKw==}
+    peerDependencies:
+      octane: '>=0.1.12'
+      react: '>=18'
+    peerDependenciesMeta:
+      octane:
+        optional: true
+      react:
+        optional: true
+    dependencies:
+      react: 19.3.0
+    dev: false
 
   /@tanstack/match-sorter-utils@9.1.2:
     resolution: {integrity: sha512-aPkUQctDzpXLSWhlx7jUDi3mInsI18xcnrK1hvIyIa88ab1ax88cACr7xU+BKMCGB4NZYNwh4SoNSEbv3RY2NA==}

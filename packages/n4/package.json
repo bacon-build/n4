@@ -34,5 +34,8 @@
   },
   "devDependencies": {
     "tsup": "^8.5.1"
+  },
+  "dependencies": {
+    "@tanstack/markdown": "^1.0.0"
   }
 }
