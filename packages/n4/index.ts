@@ -12,7 +12,7 @@ export function transformTextToNote(text: string) {
   const list = isList ? listItems.filter(item => item !== '') : []
 
   const isMarkdown = title?.startsWith(MARKDOWN_PREFIX)
-  const markdown = isMarkdown ? renderHtml(text) : null
+  const markdown = isMarkdown ? renderHtml(text) : ''
 
   return {
     title,
