@@ -29,8 +29,8 @@
     "lint": "tsc",
     "prebuild": "npm run lint",
     "build": "tsup index.ts --format cjs,esm --dts",
-    "prepublish": "npm run build",
-    "publish": "npm publish --access=public"
+    "prepack": "npm run build",
+    "release": "npm publish --access=public"
   },
   "devDependencies": {
     "tsup": "^8.5.1"
